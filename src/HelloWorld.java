@@ -8,12 +8,13 @@ public class HelloWorld {
         boolean cuteOrNot = false;
         cuteOrNot = true;
         String name = "Monster Turtle";
-        System.out.println(name + " is a " + breed);
+        System.out.println("Hello Cruel World..");
 
         if (cuteOrNot) {
-            System.out.println(name + " is cute ");
+            System.out.print(name + " is cute ");
         } else {
             System.out.println(name + " is mean looking");
         }
     }
 }
+

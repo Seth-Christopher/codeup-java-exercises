@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 public class CodeupJavaExercise {
     public static void main(String[] args) {
         String cohort = "Hippogriff";
@@ -7,11 +10,11 @@ public class CodeupJavaExercise {
         System.out.printf("You %s's, welcome to week %d !!! %nYou are %.4f%% of the way through.", cohort, week, completionPercentage);
         System.out.printf("%nThis is a new line.%n");
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("What is your name?");
-//        String userInput = scanner.nextLine();
-//        System.out.printf("Well hello %s , you cheeky bastard ;)", userInput);
-//
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String userInput = scanner.nextLine();
+        System.out.printf("Well hello %s , you cheeky bastard ;)", userInput);
+
 //
 //        System.out.printf("%n Now enter a number:");
 //        int userNumber = scanner.nextInt();

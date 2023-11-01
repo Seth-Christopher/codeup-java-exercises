@@ -1,7 +1,4 @@
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
-public class ConsoleExercises {
+public class CodeupJavaExercise {
     public static void main(String[] args) {
         String cohort = "Hippogriff";
         byte week = 9;

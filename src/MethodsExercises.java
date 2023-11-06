@@ -41,14 +41,9 @@ public class MethodsExercises {
     }
 
     public static int getInteger(int min, int max) {
-        min = 1;
-        max = 10;
-        String prompt = "Enter a number between " + min + ", " + max + ":";
-        int userInput;
-
         Scanner newScanner = new Scanner(System.in);
-        System.out.println(prompt);
-        userInput = newScanner.nextInt();
+        System.out.printf("Enter a number between %d and %d : ", min, max);
+        int userInput = newScanner.nextInt();
         if (userInput <= 10 && userInput >= 1) {
             return userInput;
         }

@@ -19,7 +19,6 @@ public class Contact {
     }
 
     // getter
-
     // technical name: "accessor"
     public String getName(){
         return name;

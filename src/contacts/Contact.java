@@ -1,5 +1,7 @@
 package contacts;
 
+import java.util.Arrays;
+
 public class Contact {
 
 //    public String name;
@@ -8,10 +10,14 @@ public class Contact {
 
     // instead of using public classes , we normally should make them private like below:
 
+    private static int totalContacts;
     private String name;
     private String mobile;
     private String email;
 
+    public static int getTotalContacts(){
+        return totalContacts;
+    }
     // setter
     // technical name: "mutator"
     public void setName(String name){
@@ -48,8 +54,6 @@ public class Contact {
         return contactProperty == null ? "" : contactProperty;
     }
 
-
-
     public String display(){
         return String.format(
                 "Name: %s%n" +
@@ -61,11 +65,18 @@ public class Contact {
         );
     }
 
-    public Contact(){
-        System.out.println("New contact!");
+    // ArrayLecture
+    public static Contact[] addContact (Contact[] contacts, Contact newContact){
+        Contact[] updatedContacts = Arrays.copyOf(contacts, contacts.length + 1);
+        updatedContacts[updatedContacts.length - 1] = newContact;
+        return updatedContacts;
+    }
+    public Contact() {
+        totalContacts++;
     }
 
     public Contact(String name, String mobile, String email){
+        totalContacts++;
         this.name = name;
         this.mobile = mobile;
         this.email = email;

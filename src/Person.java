@@ -10,21 +10,12 @@ public class Person {
         this.name = name;
     }
 
-    public boolean sayHello(){
-        System.out.println("Hello " + name);
-        return false;
+    public void sayHello(){
+        System.out.printf("Hello, %s%n", name);
     }
 
-
-    public static void main(String[] args) {
-        Person gobirds = new Person();
-
-        gobirds.name("Go Birds");
-
-        System.out.println(gobirds.sayHello());
+    public Person(String name){
+        this.name = name;
     }
 
-    private void getName(String goBirds) {
-
-    }
 }

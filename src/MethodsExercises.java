@@ -50,8 +50,47 @@ public class MethodsExercises {
             return getInteger(min, max);
         }
 
+        public static long fact(long n) {
+            if(n == 1 || n == 2) {
+                return n;
+            }
+            return n * fact(n - 1);
+        }
+
+
+
+        public static void roll2Dice(int numSides) {
+            int die1 = randomInt(1, numSides);
+            System.out.println("Your roll a " + die1);
+
+            int die2 = randomInt(1, numSides);
+            System.out.println("You rolled a " + die2);
+        }
+        public static int randomInt(int low, int high) {
+            return (int) Math.floor(Math.random() * (high - low + 1) + low);
+        }
+
+
         public static void main (String[]args){
-            System.out.println(getInteger(1, 10));
+            Scanner mainScanner = new Scanner(System.in);
+//            System.out.println(getInteger(1, 10));
+            System.out.println("Enter the number of sides for a pair of dice: ");
+            int sideNum = mainScanner.nextInt();
+            mainScanner.nextLine();
+
+            System.out.println("Press Enter to roll some dice!");
+            mainScanner.nextLine();
+
+            roll2Dice(sideNum);
+
+            System.out.println("Roll the dice again (y/n)? ");
+            String choice = mainScanner.nextLine().trim();
+            if(choice.equalsIgnoreCase("Y")) {
+                roll2Dice(sideNum);
+            }
+            mainScanner.close();
+
+
         }
 
     }

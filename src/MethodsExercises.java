@@ -13,7 +13,7 @@ public class MethodsExercises {
         return a * b;
     }
 
-    // using a loop
+    // using a loop as to not use the * operator per exercise
     public static int loopMultiply(int a, int b){
         int result = 0;
         for (int i = 0; i < b; i++) {
@@ -22,7 +22,7 @@ public class MethodsExercises {
         return result;
     }
 
-    // using recursion
+    // using recursion, again as to not use the * operator per exercise
     public static int multiply(int a, int b) {
         if (b == 0) {
             return 0;
@@ -50,6 +50,10 @@ public class MethodsExercises {
             return getInteger(min, max);
         }
 
+    public static int randomInt(int low, int high) {
+        return (int) Math.floor(Math.random() * (high - low + 1) + low);
+    }
+        // DocRobs factorial function (method)
         public static long fact(long n) {
             if(n == 1 || n == 2) {
                 return n;
@@ -66,10 +70,10 @@ public class MethodsExercises {
             int die2 = randomInt(1, numSides);
             System.out.println("You rolled a " + die2);
         }
-        public static int randomInt(int low, int high) {
-            return (int) Math.floor(Math.random() * (high - low + 1) + low);
-        }
 
+
+        // below is where we call and use the above functions (methods)
+        // we perform our tasks within the main
 
         public static void main (String[]args){
             Scanner mainScanner = new Scanner(System.in);

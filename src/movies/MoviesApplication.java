@@ -15,7 +15,7 @@ public class MoviesApplication {
             printMenu();
 
             // 2. wait for user to choose menu option
-            int choice = input.getInt(0, 51, "Enter your choice: ");
+            int choice = input.getInt(0, 51, "Enter your choice");
 
             System.out.println(choice);
             // 3. validate the choice, if no good then go back to 1

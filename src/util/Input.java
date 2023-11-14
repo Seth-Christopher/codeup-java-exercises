@@ -2,6 +2,7 @@ package util;
 
 import java.util.Scanner;
 
+
 public class Input {
 
     private final Scanner scanner;
@@ -26,10 +27,18 @@ public class Input {
         return userNumber;
     }
 
-    public int getInt(){
-        System.out.println("Enter a number: ");
-        return scanner.nextInt();
+// exceptions exercise:
+    public int getInt() {
+        String input = getString();
+        try {
+            return Integer.valueOf(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid integer input, try again loser..");
+            return getInt();
+        }
     }
+//        System.out.println("Enter a number: ");
+//        return scanner.nextInt();
 
     public int getInt(int min, int max, String prompt) {
         System.out.print(prompt);
@@ -40,6 +49,7 @@ public class Input {
         }
         return anInt;
     }
+
     public double getDouble(double min, double max) {
         double userNumber;
         do {
@@ -48,15 +58,29 @@ public class Input {
         } while (userNumber < min || userNumber > max);
         return userNumber;
     }
-
-    public double getDouble(){
-        System.out.println("Enter a number: ");
-        return scanner.nextDouble();
+// exceptions exercise:
+    public double getDouble() {
+        String input = getString();
+        try {
+            return Double.valueOf(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid double input, try again loser..");
+            return getDouble();
+        }
     }
+//        System.out.println("Enter a number: ");
+//        return scanner.nextDouble();
+
 
     public Input(){
         this.scanner = new Scanner(System.in);
     }
 
+    public static void main(String[] args) {
+        Input input = new Input();
+
+        input.getDouble();
+    }
 
 }
+

@@ -12,7 +12,7 @@ public class Contact {
 
     private static int totalContacts;
     private String name;
-    private String mobile;
+    private String phoneNumber;
     private String email;
 
     public static int getTotalContacts(){
@@ -29,16 +29,16 @@ public class Contact {
     public String getName(){
         return name;
     }
-    public void setMobile(String mobile) {
-        if (mobile.length() == 10) {
-            this.mobile = mobile;
+    public void setMobile(String phoneNumber) {
+        if (phoneNumber.length() == 10) {
+            this.phoneNumber = phoneNumber;
         } else {
-            this.mobile = "";
+            this.phoneNumber = "";
         }
     }
 
-    public String getMobile(){
-        return mobile;
+    public String getPhoneNumber(){
+        return phoneNumber;
     }
 
     public void setEmail(String email){
@@ -60,8 +60,8 @@ public class Contact {
                 "Mobile: %s%n" +
                 "Email: %s%n",
                     // instead of using the same ternary multiple times , we can use the checkNull method we created above
-//                name, mobile == null ? "" : mobile, email == null ? "" : email
-                name, checkNull(mobile), checkNull(email)
+//                name, phoneNumber == null ? "" : phoneNumber, email == null ? "" : email
+                name, checkNull(phoneNumber), checkNull(email)
         );
     }
 
@@ -75,10 +75,10 @@ public class Contact {
         totalContacts++;
     }
 
-    public Contact(String name, String mobile, String email){
+    public Contact(String name, String phoneNumber, String email){
         totalContacts++;
         this.name = name;
-        this.mobile = mobile;
+        this.phoneNumber = phoneNumber;
         this.email = email;
     }
 }

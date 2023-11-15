@@ -51,7 +51,7 @@ public class ArraysLecture {
 
         for (Contact contact : contacts){
             System.out.printf("Name: %s%n", contact.getName());
-            System.out.printf("Phone: %s%n", contact.getMobile());
+            System.out.printf("Phone: %s%n", contact.getPhoneNumber());
             System.out.println(" ");
         }
 

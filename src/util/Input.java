@@ -7,12 +7,18 @@ public class Input {
 
     private final Scanner scanner;
 
-    public String getString(){
-        System.out.println("Enter your text:");
+    public String getString() {
         return scanner.nextLine();
-
-
     }
+
+
+    public String getString(String prompt) {
+        System.out.print(prompt);
+        return getString();
+    }
+
+
+
     public boolean yesNo(){
         System.out.println("Yes or NO?");
         return scanner.next().equalsIgnoreCase("yes");

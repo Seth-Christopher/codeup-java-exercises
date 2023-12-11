@@ -19,6 +19,12 @@ public class HelloWorld {
         } else {
             System.out.println(name + " is mean looking");
         }
+
+        int myFavNumber = 2;
+        String myFavString = "redoing the java coursework";
+        System.out.println(myFavString);
+
+
     }
 }
 

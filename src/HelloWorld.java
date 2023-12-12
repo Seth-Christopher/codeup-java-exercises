@@ -21,8 +21,36 @@ public class HelloWorld {
         }
 
         int myFavNumber = 2;
-        String myFavString = "redoing the java coursework";
+        char myFavString = 'Q';
         System.out.println(myFavString);
+
+        int x = 5;
+        System.out.println(x++);
+//        System.out.println(x);
+
+
+        int y = 5;
+        System.out.println(++y);
+        System.out.println(y);
+
+
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) "three";
+
+        int a = 4;
+//        a = a + 5;
+        x += 5;
+
+        int b = 3;
+        int c = 4;
+        b *= c;
+
+        int d = 10;
+        int e = 2;
+        d /= y;
+        e -= x;
+
 
 
     }

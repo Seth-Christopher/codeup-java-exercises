@@ -46,18 +46,19 @@ public class ConsoleIOExercise {
 
         double pi = 3.14159;
 
-        System.out.printf("The value of pi is approximately %.2f. %n", pi);
-
-        System.out.println("Quick, give me a number, any number.");
-        String anyNumber = userPrompt.nextLine();
-
-        System.out.printf("So the number you choose is %s ?", anyNumber);
+            System.out.printf("The value of pi is approximately %.2f. %n", pi);
 
 
 
+            System.out.println("Quick, give me a number, any number.");
+            String anyNumber = userPrompt.nextLine();
+            while (true) {
+                while (!userPrompt.)
+            }
+
+            System.out.printf("So the number you choose is %s ? %n", anyNumber);
+            String userReply = userPrompt.nextLine();
 
 
-    }
-
-
+        }
 }

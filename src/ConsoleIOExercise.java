@@ -44,21 +44,50 @@ public class ConsoleIOExercise {
 
         // THE ABOVE CODE IS MY INITIAL WORK. BELOW, IS JUST MY REFRESHER
 
-        double pi = 3.14159;
-
-            System.out.printf("The value of pi is approximately %.2f. %n", pi);
-
+//        double pi = 3.14159;
+//
+//            System.out.printf("The value of pi is approximately %.2f. %n", pi);
+//
 
 
             System.out.println("Quick, give me a number, any number.");
-            String anyNumber = userPrompt.nextLine();
+            int anyNumber;
             while (true) {
-                while (!userPrompt.)
+                while (!userPrompt.hasNextInt()) {
+                    System.out.println("That is not a number! Please enter an an integer");
+                    userPrompt.next();
+                }
+                anyNumber = userPrompt.nextInt();
+                if (anyNumber < 5) {
+                    System.out.println("Please make it an integer larger than 5:");
+                } else {
+                    break;
+                }
             }
 
+
+        Scanner confirmation = new Scanner(System.in);
+//        int userReplyTwo;
             System.out.printf("So the number you choose is %s ? %n", anyNumber);
-            String userReply = userPrompt.nextLine();
+            String userReply = confirmation.nextLine();
 
+            if (userReply.equalsIgnoreCase("Y") || userReply.equalsIgnoreCase("Yes")) {
+                System.out.println("Cool number brooo.");
+            } else {
+                System.out.println("Well that's not cool, pick again: ");
+                int userReplyTwo = confirmation.nextInt();
+                    if (!confirmation.hasNextInt()) {
+                        System.out.println("Try again, that's not a number:");
+                        confirmation.next();
+                    }
+                    userReplyTwo = confirmation.nextInt();
+                    if (userReplyTwo < 5) {
+                        System.out.println("Please make it an integer larger than 5:");
+                        confirmation.next();
+                    } else {
 
-        }
+                        System.out.println("thanks dude");
+                    }
+                }
+            }
 }

@@ -135,11 +135,9 @@ public class ControlFlowLectureandExercise {
 
 
 //---> Refactor the previous two exercises to use a for loop instead.
-//        for(int i = 100; i > 0; i -= 5 ) {
-//            System.out.println(i);
-//        }
-//      }
-//    }
+        for(int sub = 100; sub > 0; sub -= 5 ) {
+            System.out.println(sub);
+        }
 
         for (int first = 5; first <= 15; first++) {
             System.out.println(first);
@@ -150,17 +148,37 @@ public class ControlFlowLectureandExercise {
             second ++;
         }
 
-        for (int third = 100; third > -10; third--) {
+        for (int third = 100; third > -10;) {
             System.out.println(third);
             third -= 5;
         }
+
+        for (long fourth = 2; fourth <= 1000000;) {
+            System.out.println(fourth);
+            fourth *= fourth;
+        }
         
-//        for ( long i = 2; i < 1000000; i*=i){
-//            System.out.println(i);
-//        }
-//    }
-//      }
-//-------->Fizzbuzz:<--------\\
+        for ( long fifth = 2; fifth < 1000; fifth *= fifth) {
+            System.out.println(fifth);
+            }
+
+
+        for (int six = 0; six < 20; six++) {
+            System.out.println("This is the 6th for-loop we will break at 15: " + six);
+            if (six == 15) {
+                break;
+            }
+        }
+
+        // below we will do our 7th for-loop, but use continue statement to skip all even numbers.
+        for (int seven = 0; seven <= 50; seven++) {
+            if (seven % 2 == 1) {
+                continue;
+            }
+            System.out.println(seven);
+        }
+
+            //-------->Fizzbuzz:<--------\\
 //--->       Write a program that prints the numbers from 1 to 100.
 //--->        For multiples of three: print “Fizz” instead of the number.
 //--->        For the multiples of five: print “Buzz”.

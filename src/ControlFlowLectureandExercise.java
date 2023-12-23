@@ -226,18 +226,20 @@ public class ControlFlowLectureandExercise {
 //--->        Prompt the user to continue.
 //--->        Assume that the user will enter valid integers for the              grades.
 //--->        The application should only continue if the user agrees             to.
+//
+//       System.out.println("Enter a numeric grade between 0 and 100");
+//       int grade = Integer.parseInt(scanner.nextLine());
+//       char letterGrade = 'F';
+//       if (grade > 60 && grade < 70) {
+//           letterGrade = 'D';
+//       } else if (grade < 80) {
+//           letterGrade = 'C';
+//       } else if (grade < 90) {
+//           letterGrade = 'B';
+//       } else if (grade < 100) {
+//           letterGrade = 'A';
+//       }
+//       System.out.printf("The letter grade is %c%n", letterGrade);
 
-//        System.out.println("Enter a numeric grade between 0 and 100");
-//        int grade = Integer.parseInt(scanner.nextLine());
-//        char letterGrade = 'F';
-//        if (grade > 60 && grade < 70) {
-//            letterGrade = 'D';
-//        } else if (grade < 80) {
-//            letterGrade = 'C';
-//        } else if (grade < 90) {
-//            letterGrade = 'B';
-//        } else if (grade < 100) {
-//            letterGrade = 'A';
-//        }
-//        System.out.printf("The letter grade is %c%n", letterGrade);
+
     }}

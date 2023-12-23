@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ReDoControlFlowExercises {
@@ -91,7 +92,19 @@ public class ReDoControlFlowExercises {
         // GRADES \\
 
         System.out.println("Please enter a numerical grade from 0 to 100: ");
-        int grade = scanner.nextInt();
+
+        int grade = 0;
+        boolean validInput = false;
+
+        while (!validInput) {
+            try {
+                grade = scanner.nextInt();
+                validInput = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter an integer.");
+                scanner.next();
+            }
+        }
 
         if (grade >= 99 && grade <= 100) {
         System.out.println("A++ ! Great Job!");

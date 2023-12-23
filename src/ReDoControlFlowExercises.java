@@ -88,5 +88,26 @@ public class ReDoControlFlowExercises {
         }
 
 
+        // GRADES \\
+
+        System.out.println("Please enter a numerical grade from 0 to 100: ");
+        int grade = scanner.nextInt();
+
+        if (grade >= 99 && grade <= 100) {
+        System.out.println("A++ ! Great Job!");
+        } else if (grade >= 88) {
+            System.out.println("Your grade is an A");
+        } else if (grade >= 80 && grade <= 87) {
+            System.out.println("Your grade is a B");
+        } else if (grade >= 67 && grade <= 79) {
+        System.out.println("Your grade is a C");
+        } else if (grade >= 60 && grade <= 66) {
+            System.out.println("Your grade is a D");
+        } else {
+            System.out.println("F, you need help");
+        }
+
+
+
     }
 }

@@ -91,23 +91,54 @@ public class ReDoControlFlowExercises {
 
         // GRADES \\
 
+        // Two different ways we can run this code and ensure the user isn't allowed to enter anything other than an Integer
+        // We will use a try a catch to handle the InputMismatchException
+        // We will also use the .hasNextInt(); method
+
+
         System.out.println("Please enter a numerical grade from 0 to 100: ");
 
+        // want to set the initial value of grade to 0
         int grade = 0;
+        // creating a boolean that will be set to false
         boolean validInput = false;
 
+        // --------- TRY CATCH -------- \\
+
+        // while not false
+//        while (!validInput) {
+//
+//            try {
+//                // this is to get users input
+//                grade = scanner.nextInt();
+//                // setting the users input to true
+//                validInput = true;
+//            } catch (InputMismatchException e) { // catching the exception
+//                System.out.println("Invalid input. Please enter an integer.");
+//                scanner.next(); // this will consume the invalid token (I guess cancel it out)
+//            }
+//        }
+
+        // ---------- .hasNextInt() METHOD ------------- \\
+
+        // while not false
         while (!validInput) {
-            try {
+
+            // hasNexInt method is checking to see if next input token can be
+            // interpreted as an integer before attempting to read it.
+            if (scanner.hasNextInt()) {
+                // grabbing the users input
                 grade = scanner.nextInt();
+                // setting the input to true
                 validInput = true;
-            } catch (InputMismatchException e) {
+            } else {
                 System.out.println("Invalid input. Please enter an integer.");
                 scanner.next();
             }
         }
 
         if (grade >= 99 && grade <= 100) {
-        System.out.println("A++ ! Great Job!");
+        System.out.println("A++ Great Job!");
         } else if (grade >= 88) {
             System.out.println("Your grade is an A");
         } else if (grade >= 80 && grade <= 87) {

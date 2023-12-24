@@ -153,5 +153,29 @@ public class ReDoControlFlowExercises {
 
 
 
+    // ---------- AVERAGE TIP CALCULATOR ---------- \\
+
+        double bill = 0;
+
+        System.out.println("What was the total for your bill? ");
+        bill = scanner.nextDouble();
+
+        System.out.println("Below will be a chart with the different percentages based off your bill total. ");
+
+        System.out.println("""
+                  TIP PERCENTAGES
+               ---------------------
+               ---------|-------|-----
+                10%     |  15%  |  20%
+               ---------|-------|-----
+                """);
+
+//        for (double i = 2; i <= 3 ; i++) {
+            System.out.printf(" $%.2f   | $%.2f | $%.2f", bill * .10, bill * .15, bill * .20);
+
+
+//        }
+
+
     }
 }

@@ -60,8 +60,35 @@ public class StringExercise {
         input.startsWith("codeupt");        // false
         input.startsWith("Codeup");         // true
 
-        input.endsWith("..");               // false
-        input.endsWith("More.");            // false
-        input.endsWith("more..");           // true
+        input.endsWith("More..");
+        input.endsWith("more");            // false
+        input.endsWith("more..");          // true
+
+
+        //---------- STRING MANIPULATION METHODS ----------- \\
+
+        // the following methods can be used to manipulate strings \\
+
+
+        // returns the character at the specified index of the string.
+//        char charAt (int index);
+
+        // returns the index of the first occurrence of a certain substring
+        // returns -1 if the substring is not found
+//        int indexOf(String subString);
+
+
+        // like indexOf, but starts the search from the end of the string.
+//         int lastIndexOf(String subString);
+
+        // returns the length of a string
+//        int length();
+
+        // returns a copy of the string that has pattern replaced with replacement
+//        String replace(String pattern, String replacement);
+
+
+
+
     }
 }

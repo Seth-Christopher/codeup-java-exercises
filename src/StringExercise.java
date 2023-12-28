@@ -65,7 +65,7 @@ public class StringExercise {
         input.endsWith("more..");          // true
 
 
-        //---------- STRING MANIPULATION METHODS ----------- \\
+//--------------------------- STRING MANIPULATION METHODS ------------------------- \\
 
         // the following methods can be used to manipulate strings \\
 
@@ -81,14 +81,27 @@ public class StringExercise {
         // like indexOf, but starts the search from the end of the string.
 //         int lastIndexOf(String subString);
 
+
         // returns the length of a string
 //        int length();
+
 
         // returns a copy of the string that has pattern replaced with replacement
 //        String replace(String pattern, String replacement);
 
 
+        // returns a new substring that starts at a specified index and (optionally) ends at the specified index
+//        String substring(int beginIndex[, int endIndex]);
 
 
+        // returns a string that has all lowerCase letters
+//        String toLowerCase();
+
+        // returns a string that has all upperCase letters
+//        String toUpperCase();
+
+
+        // returns a copy of the string without leading and trailing whitespaces
+//        String trim();
     }
 }

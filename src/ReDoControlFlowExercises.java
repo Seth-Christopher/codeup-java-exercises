@@ -3,6 +3,13 @@ import java.util.Scanner;
 
 public class ReDoControlFlowExercises {
     public static void main(String[] args) {
+
+        int myFavNum = 2;
+        String myString = "This is my favorite number " + myFavNum;
+        System.out.println(myString);
+
+
+
         // 1. Loop Basics
 
         // A.
@@ -175,6 +182,8 @@ public class ReDoControlFlowExercises {
 
 
 //        }
+
+        System.out.println("Happy New Year! Lets see what 24 brings.");
 
 
     }

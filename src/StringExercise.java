@@ -80,12 +80,14 @@ public class StringExercise {
         char ch = name.charAt(4);
         System.out.println(ch);     // returns the char value at the 4th index
 
+
 //        Accessing First and Last Character by Using the charAt() Method
         String str = "Examples of charAt method";
         int strLength = str.length();
         System.out.println("Character at 0 index is: " + str.charAt(0));    // fetching first character
 
         System.out.println("Character at last index is: " + str.charAt(strLength-1)); // the last character is present at the string length-1 index
+
 
 
 //        Print Characters Presented at Odd Positions by Using the charAt() Method
@@ -97,6 +99,8 @@ public class StringExercise {
                 System.out.println("Char at index " + i + " is " + strTwo.charAt(i));
             }
         }
+
+
 
 //        Counting Frequency of a character in a String by Using the charAt() Method
 
@@ -111,11 +115,16 @@ public class StringExercise {
 
 
 
-
-
         // returns the index of the first occurrence of a certain substring
         // returns -1 if the substring is not found
-//        int indexOf(String subString);
+//        int indexOf(String subString);     this method takes substring as an argument and returns the index of the first character of the substring
+
+        String strFour = "This is indexOf method";
+        // passing Substring
+        int index = strFour.indexOf("method");  // returns the index
+        System.out.println("index of substring " + index);
+
+
 
 
         // like indexOf, but starts the search from the end of the string.

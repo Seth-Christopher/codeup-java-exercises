@@ -143,20 +143,27 @@ public class StringExercise {
 
 
 
-
-
     // -- int lastIndexOf(int ch, int fromIndex); -- \\
         // returns the last index position for the given substring
-
-
-
+        String exampleTwo = "This is index of example";
+        int index2 = exampleTwo.lastIndexOf('s', 5);
+        System.out.println(index2);
 
 
     // -- int lastIndexOf(String substring); --\\
         // returns the last index position for the given substring
+        String exampleThree = "This is last index of example.";
+        int index3 = exampleThree.lastIndexOf("of");
+        System.out.println(index3);
 
     // -- int lastIndexOf(String substring, fromIndex); --\\
         // returns last index of given position for the given substring and from index
+        String exampleFour = "This is of course the last index of example.";
+        int index4 = exampleFour.lastIndexOf("of", 2);  // tries to grab the index of                                                               "of"  within the first 2 indexes.
+        System.out.println(index4);         // -1 if not found
+
+        index4 = exampleFour.lastIndexOf("of", 10);
+        System.out.println(index4);     // the index of "of" within the first 10 indexes is at index 8.
 
 
         // returns the length of a string

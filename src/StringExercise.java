@@ -71,7 +71,7 @@ public class StringExercise {
 
 
 
-//          SYNTAX:  char charAt (int index);
+//   --------       SYNTAX:  char charAt (int index);
         // returns the character at the specified index of the string.
         // throws StringIndexOutOfBoundsException if the index is a negative value
         // or greater than or equal to the string length.
@@ -81,7 +81,7 @@ public class StringExercise {
         System.out.println(ch);     // returns the char value at the 4th index
 
 
-//        Accessing First and Last Character by Using the charAt() Method
+//   ---     Accessing First and Last Character by Using the charAt() Method
         String str = "Examples of charAt method";
         int strLength = str.length();
         System.out.println("Character at 0 index is: " + str.charAt(0));    // fetching first character
@@ -90,7 +90,7 @@ public class StringExercise {
 
 
 
-//        Print Characters Presented at Odd Positions by Using the charAt() Method
+//   ---     Print Characters Presented at Odd Positions by Using the charAt() Method
 
         String strTwo = "We are accessing all elements at odd index";
         for (int i = 0; i <= strTwo.length()-1; i++) { // the -1 is necessary because array & string indices in Java start at 0, so last index of a string is always one less than its length.
@@ -102,7 +102,7 @@ public class StringExercise {
 
 
 
-//        Counting Frequency of a character in a String by Using the charAt() Method
+//  ---      Counting Frequency of a character in a String by Using the charAt() Method
 
         String strThree = "Counting frequency of a character in a string";
         int count = 0;
@@ -115,9 +115,11 @@ public class StringExercise {
 
 
 
-        // returns the index of the first occurrence of a certain substring
-        // returns -1 if the substring is not found
-//        int indexOf(String subString);     this method takes substring as an argument and returns the index of the first character of the substring
+
+// ---------       int indexOf(String subString);
+// returns the index of the first occurrence of a certain substring
+// returns -1 if the substring is not found
+// this method takes substring as an argument and returns the index of the first character of the substring
 
         String strFour = "This is indexOf method";
         // passing Substring
@@ -125,10 +127,36 @@ public class StringExercise {
         System.out.println("index of substring " + index);
 
 
-
-
+//   --------      int lastIndexOf(String subString);
         // like indexOf, but starts the search from the end of the string.
-//         int lastIndexOf(String subString);
+        // returns the last index of the given character value or substring.
+        // if not found, returns -1.
+        // index counter starts at 0
+
+// ----- There are 4 types of lastIndexOf() method in Java. ------- \\
+
+     // --  int lastIndexOf(int ch); -- \\
+        // returns last index position for the given char value
+        String exampleOne = "This is index of example"; // there are 2 's' characters in this sentence
+        int index1 = exampleOne.lastIndexOf('s');  // returns the last index of 's' char value
+        System.out.println(index1);                   // 6
+
+
+
+
+
+    // -- int lastIndexOf(int ch, int fromIndex); -- \\
+        // returns the last index position for the given substring
+
+
+
+
+
+    // -- int lastIndexOf(String substring); --\\
+        // returns the last index position for the given substring
+
+    // -- int lastIndexOf(String substring, fromIndex); --\\
+        // returns last index of given position for the given substring and from index
 
 
         // returns the length of a string

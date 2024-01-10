@@ -166,8 +166,23 @@ public class StringExercise {
         System.out.println(index4);     // the index of "of" within the first 10 indexes is at index 8.
 
 
-        // returns the length of a string
-//        int length();
+
+// --------       int length();
+// returns the length of a string
+// there are different approaches to find the length of an integer in Java
+// --- we could use the following approaches to find the length of an integer ---- \\
+        // Using while loop
+        // Using String
+        // Using Continuous Multiplication
+        // Using Logarithm
+        // Using Recursion
+// Using while loop
+     public int countDig(int n)
+        {
+         int count =0;
+         while(n != 0)
+        }
+
 
 
         // returns a copy of the string that has pattern replaced with replacement

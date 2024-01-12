@@ -3,16 +3,15 @@ public class StringExercise {
     // ---- Integer Length Example using While loop ---- \\
 
 
-        // method to find the number of digits present in the number n
-        public int countDig(int n) {
-            int count = 0;
-            while(n != 0) {
-            // removing the last digit of the number n
-                n = n/10;
+        // The countDig method calculates the number of digits in an integer.
+        public int countDig(int n) {    // the method takes an integer n as input
+            int count = 0;              // initializes a counter variable count to 0. The counter will keep track of the number of digits in n
+            while(n != 0) {             // method enters a while loop that continues as long as n is not equal to 0.
+                n = n/10;       // n is divided by 10, effectively removing the last digit. For instance, if n was 1234, after this operation, n would become 123
             // increasing count by 1
                 count = count +1;
             }
-            return count;
+            return count;       //
         }
 
 
@@ -28,6 +27,10 @@ public class StringExercise {
             int count = obj.countDig(arr[i]);
                     System.out.println("The length of the number " + arr[i] + " is " + count);
         }
+
+
+
+
 
         String s1 = "We don't need no education";
         String s2 = "We don't need no thought control";

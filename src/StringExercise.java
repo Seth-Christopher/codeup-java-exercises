@@ -11,14 +11,16 @@ public class StringExercise {
             // increasing count by 1
                 count = count +1;
             }
-            return count;       //
+
+            return count;       // once n reaches 0 (meaning there are no more digits left), the loop ends.
+                                // the method then returns the counter count which represents the number of digits in the original input integer
         }
 
 
     public static void main(String[] args) {
 
         // input array
-            int arr[] = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
+            int[] arr = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
         // size of the input array
             int size = arr.length;
         // creating an object of the class StringExercise

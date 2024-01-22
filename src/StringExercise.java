@@ -222,5 +222,11 @@ public class StringExercise {
 
         // returns a copy of the string without leading and trailing whitespaces
 //        String trim();
+
+
+        String tryingShit = "need to upload to git";
+        System.out.println(tryingShit);
+
+
     }
 }

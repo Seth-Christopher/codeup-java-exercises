@@ -1,6 +1,8 @@
+import java.util.Scanner;
 public class StringExercise {
 
-    // ---- Integer Length Example using While loop ---- \\
+    // ---- INTEGER LENGTH EXAMPLE USING WHILE LOOP---- \\
+
 
 
         // The countDig method calculates the number of digits in an integer.
@@ -189,6 +191,8 @@ public class StringExercise {
         System.out.println(index4);     // the index of "of" within the first 10 indexes is at index 8.
 
 
+
+
 // --------       int length();
 // returns the length of a string
 // there are different approaches to find the length of an integer in Java
@@ -224,8 +228,22 @@ public class StringExercise {
 //        String trim();
 
 
-        String tryingShit = "need to upload to git";
-        System.out.println(tryingShit);
+        // exercise String Basics
+        String one = "We don't need no education.";
+        String two = "We don't need no thought control.";
+        System.out.printf("%s,%n%s%n", one, two);
+
+        System.out.println("""
+                Check "this" out!, "s inside of "s!
+                """);
+
+        System.out.println("""
+                I can do backslashes \\, double backslashes \\\\, 
+                and the amazing triple backslash \\\\\\!
+                """);
+
+        Scanner scanner = new Scanner(System.in);
+
 
 
     }

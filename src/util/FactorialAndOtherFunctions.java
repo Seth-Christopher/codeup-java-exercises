@@ -14,7 +14,7 @@ public class FactorialAndOtherFunctions {
 
 
 
-    // The countDig method calculates the number of digits in an integer.
+    // The countDig method calculates the number of digits in an integer using while loop.
     public int countDig(int n) {    // the method takes an integer n as input
         int count = 0;              // initializes a counter variable count to 0. The counter will keep track of the number of digits in n
         while(n != 0) {             // method enters a while loop that continues as long as n is not equal to 0.

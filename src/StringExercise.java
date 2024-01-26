@@ -1,10 +1,9 @@
 import java.util.Scanner;
 public class StringExercise {
 
-    // ---- INTEGER LENGTH EXAMPLE USING WHILE LOOP---- \\
+            // HOW TO FIND LENGTH OF INTEGER IN JAVA \\
 
-
-
+    //  INTEGER LENGTH EXAMPLE USING WHILE LOOP
         // The countDig method calculates the number of digits in an integer.
         public int countDig(int n) {    // the method takes an integer n as input
             int count = 0;              // initializes a counter variable count to 0. The counter will keep track of the number of digits in n
@@ -17,6 +16,10 @@ public class StringExercise {
             return count;       // once n reaches 0 (meaning there are no more digits left), the loop ends.
                                 // the method then returns the counter count which represents the number of digits in the original input integer
         }
+
+    // USING STRING
+        // Another idea can be to convert the number into a string and then compute its size.
+        // Size of the string gives the length of the string.
 
 
     public static void main(String[] args) {

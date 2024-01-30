@@ -21,19 +21,46 @@ public class StringExercise {
         // Another idea can be to convert the number into a string and then compute its size.
         // Size of the string gives the length of the string.
 
+    // method to find number of digits present in the number n
+    public int countDigStr(int n) {
+            String str = Integer.toString(n);   // converting the number n to a string
+
+            int size = str.length();    // computing the size of the string
+            return size;
+    }
+
 
     public static void main(String[] args) {
 
+        // ---------- MAIN METHOD USED FOR COUNTDIG METHOD --------- \\
         // input array
-            int[] arr = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
+        int[] arr = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
         // size of the input array
-            int size = arr.length;
+        int size = arr.length;
         // creating an object of the class StringExercise
-            StringExercise obj = new StringExercise();
-                for (int i = 0; i < size; i++) {
+        StringExercise obj = new StringExercise();
+        for (int i = 0; i < size; i++) {
             int count = obj.countDig(arr[i]);
-                    System.out.println("The length of the number " + arr[i] + " is " + count);
+            System.out.println("The length of the number " + arr[i] + " is " + count);
         }
+
+
+
+    // ---------- MAIN METHOD USED FOR COUNTDIGStr METHOD --------- \\
+        // input array
+//            int arr[] = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
+//            int size = arr.length;
+
+        for (int i = 0; i < size; i++)
+        {
+            int count = obj.countDigStr(arr[i]);
+            System.out.println("Converting the number into a string: The length of the number " + arr[i] + " is " + count);
+        }
+
+
+
+
+
 
 
 

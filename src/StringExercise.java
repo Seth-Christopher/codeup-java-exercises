@@ -46,9 +46,22 @@ public class StringExercise {
             }
             return count;
     }
-
-
 // --------------------------------------------------------------------------------------
+
+    // USING LOGARITHM
+    // we can also use log to find the length of an integer. Observe the following program
+
+
+    public int countDigLogarithm(int n) {
+            int length = (int) (Math.log10(n) + 1);
+            return length;
+    }
+
+
+
+
+
+    // --------------------------------------------------------------------------------------
     public static void main(String[] args) {        // MAIN METHOD
 // --------------------------------------------------------------------------------------
 
@@ -87,8 +100,17 @@ public class StringExercise {
             int count = object.countDigContinuous(arrContinuous[i]);
             System.out.println("CONTINUOUS MULTIPLICATION: The length of the number " + arrContinuous[i] + " is " + count);
         }
+// --------------------------------------------------------------------------------------
 
 
+    // ----- MAIN METHOD USING LOGARITHM ------- \\
+        int[] arrLogarithm = {34, 2, 223, 45654, 1, 232, 53, 1000, 2387};
+        int sizeLogarithm = arrLogarithm.length;
+        StringExercise objectLogarithm = new StringExercise();
+        for (int i = 0; i < sizeLogarithm; i++) {
+            int count = objectLogarithm.countDigLogarithm(arrLogarithm[i]);
+            System.out.println("Using Logarithm: The length of the number " + arrLogarithm[i] + " is " + count);
+        }
 
 
 

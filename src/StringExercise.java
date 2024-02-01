@@ -16,23 +16,44 @@ public class StringExercise {
             return count;       // once n reaches 0 (meaning there are no more digits left), the loop ends.
                                 // the method then returns the counter count which represents the number of digits in the original input integer
         }
+// --------------------------------------------------------------------------------------
 
     // USING STRING
         // Another idea can be to convert the number into a string and then compute its size.
         // Size of the string gives the length of the string.
 
     // method to find number of digits present in the number n
-    public int countDigStr(int n) {
+    public int countDigString(int n) {
             String str = Integer.toString(n);   // converting the number n to a string
 
             int size = str.length();    // computing the size of the string
             return size;
     }
 
+// --------------------------------------------------------------------------------------
 
-    public static void main(String[] args) {
+    // USING CONTINUOUS MULTIPLICATION
+        // We can multiply a number 1 by 10 until it becomes greater than the number n.
+        // Each time we multiply by 10, we increment a variable count by 1.
+        // Final value of the count gives the length of the integer n.
 
-        // ---------- MAIN METHOD USED FOR COUNTDIG METHOD --------- \\
+    public int countDigContinuous(int n) {
+            int temp = 1;
+            int count = 0;
+            while(temp <= n) {
+                temp = temp * 10;
+                count = count + 1;
+            }
+            return count;
+    }
+
+
+// --------------------------------------------------------------------------------------
+    public static void main(String[] args) {        // MAIN METHOD
+// --------------------------------------------------------------------------------------
+
+
+        // ---------- MAIN METHOD USED FOR COUNTDIG METHOD for while loop --------- \\
         // input array
         int[] arr = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
         // size of the input array
@@ -43,21 +64,29 @@ public class StringExercise {
             int count = obj.countDig(arr[i]);
             System.out.println("The length of the number " + arr[i] + " is " + count);
         }
+// --------------------------------------------------------------------------------------
 
+    // ---------- MAIN METHOD USED FOR COUNTDIGString METHOD --------- \\
+//         input array
+            int[] arrString = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
+            int sizeString = arr.length;
 
-
-    // ---------- MAIN METHOD USED FOR COUNTDIGStr METHOD --------- \\
-        // input array
-//            int arr[] = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
-//            int size = arr.length;
-
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < sizeString; i++)
         {
-            int count = obj.countDigStr(arr[i]);
-            System.out.println("Converting the number into a string: The length of the number " + arr[i] + " is " + count);
+            int count = obj.countDigString(arrString[i]);
+            System.out.println("Converting the number into a string: The length of the number " + arrString[i] + " is " + count);
         }
+// --------------------------------------------------------------------------------------
 
+    // ------ MAIN METHOD USING CONTINUOUS MULTIPLICATION ------------ \\
+        int[] arrContinuous = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
+        int sizeContinuous = arrContinuous.length;
 
+        StringExercise object = new StringExercise();
+        for (int i = 0; i < size; i++) {
+            int count = object.countDigContinuous(arrContinuous[i]);
+            System.out.println("CONTINUOUS MULTIPLICATION: The length of the number " + arrContinuous[i] + " is " + count);
+        }
 
 
 

@@ -37,12 +37,13 @@ public class StringExercise {
         // Each time we multiply by 10, we increment a variable count by 1.
         // Final value of the count gives the length of the integer n.
 
-    public int countDigContinuous(int n) {
-            int temp = 1;
-            int count = 0;
-            while(temp <= n) {
-                temp = temp * 10;
-                count = count + 1;
+    // the below method take an integer (n) as an input and returns the number of times you can continuously multiply the number 1 by 10 without exceeding (n).
+    public int countDigContinuous(int n) {  //
+            int temp = 1;       // represents the current product of multiplying 1 by 10.
+            int count = 0;      // keeps track of how many times this operation has been performed.
+            while(temp <= n) {  // while loop continues as long as temp is less than or equal to (n).
+                temp = temp * 10;   // temp is multiplied by 10. this simulates the continuous multiplication of 1 by 10.
+                count = count + 1;  // after the multiplication, count is incremented by 1.
             }
             return count;
     }

@@ -51,18 +51,25 @@ public class StringExercise {
 
     // USING LOGARITHM
     // we can also use log to find the length of an integer. Observe the following program
-
-
     public int countDigLogarithm(int n) {
             int length = (int) (Math.log10(n) + 1);
             return length;
     }
 
+// --------------------------------------------------------------------------------------
+    // USING RECURSION
+
+    public int countDigRecursion(int n) {
+            if(n / 10 == 0) {
+                return 1;
+            }
+            return 1 + countDigRecursion(n/10);
+    }
+// --------------------------------------------------------------------------------------
 
 
 
 
-    // --------------------------------------------------------------------------------------
     public static void main(String[] args) {        // MAIN METHOD
 // --------------------------------------------------------------------------------------
 
@@ -113,6 +120,16 @@ public class StringExercise {
             System.out.println("Using Logarithm: The length of the number " + arrLogarithm[i] + " is " + count);
         }
 
+// --------------------------------------------------------------------------------------
+
+        int [] arrRecursion = {23, 2, 1475, 1234567, 1, 0, 1000, 20};
+        int sizeRecursion = arrRecursion.length;
+
+        StringExercise objectRecursion = new StringExercise();
+        for (int i = 0; i < sizeRecursion; i++) {
+            int count = objectRecursion.countDigRecursion(arrRecursion[i]);
+            System.out.println("Using Recursion: The length of the number " + arrRecursion[i] + " is " + count);
+        }
 
 
 

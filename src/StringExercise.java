@@ -327,7 +327,9 @@ public class StringExercise {
 //        String trim();
 
 
+        // exercise problems:
         // exercise String Basics
+
         String one = "We don't need no education.";
         String two = "We don't need no thought control.";
         System.out.printf("%s,%n%s%n", one, two);

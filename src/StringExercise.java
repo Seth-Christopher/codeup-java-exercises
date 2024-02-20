@@ -90,7 +90,7 @@ public class StringExercise {
     // ---------- MAIN METHOD USED FOR COUNTDIGString METHOD --------- \\
 //         input array
             int[] arrString = {78, 9, 2345, 899009, 1, 414, 34, 1000, 2749};
-            int sizeString = arr.length;
+            int sizeString = arrString.length;
 
         for (int i = 0; i < sizeString; i++)
         {
@@ -104,7 +104,7 @@ public class StringExercise {
         int sizeContinuous = arrContinuous.length;
 
         StringExercise object = new StringExercise();
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < sizeContinuous; i++) {
             int count = object.countDigContinuous(arrContinuous[i]);
             System.out.println("CONTINUOUS MULTIPLICATION: The length of the number " + arrContinuous[i] + " is " + count);
         }
@@ -292,39 +292,39 @@ public class StringExercise {
 
 
 
-// --------       int length();
-// returns the length of a string
-// there are different approaches to find the length of an integer in Java
-// --- we could use the following approaches to find the length of an integer ---- \\
+// -----------------       int length();
+    // returns the length of a string
+    // there are different approaches to find the length of an integer in Java
+            // --- we could use the following approaches to find the length of an integer ---- \\
         // Using while loop
         // Using String
         // Using Continuous Multiplication
         // Using Logarithm
         // Using Recursion
+
+
+
 // Using while loop
 
 
 
 
 
-
-        // returns a copy of the string that has pattern replaced with replacement
 //        String replace(String pattern, String replacement);
+        // returns a copy of the string that has pattern replaced with replacement
 
-
-        // returns a new substring that starts at a specified index and (optionally) ends at the specified index
 //        String substring(int beginIndex[, int endIndex]);
+        // returns a new substring that starts at a specified index and (optionally) ends at the specified index
 
-
-        // returns a string that has all lowerCase letters
 //        String toLowerCase();
+        // returns a string that has all lowerCase letters
 
-        // returns a string that has all upperCase letters
+
 //        String toUpperCase();
+        // returns a string that has all upperCase letters
 
-
-        // returns a copy of the string without leading and trailing whitespaces
 //        String trim();
+        // returns a copy of the string without leading and trailing whitespaces
 
 
         // exercise problems:

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class quickRefreshFeb24 {
     public static void main(String[] args) {
         // Variables in java must be declared before they are used.
@@ -30,10 +32,38 @@ public class quickRefreshFeb24 {
         System.out.println(myNumber);
         System.out.printf("%.2f %n", myNumber);    // using souf, and %.2 for how many decimal spaces
 
+        int x = 4;
+        x += 5;
 
-        String theNumberThree = "three";
-        Object o = theNumberThree;
-        int three = (int) o;
+        x = 10;
+        int y = 4;
+        y *= x;
+
+        y = 2;
+        x /= y;
+        y -= x;
+        System.out.println(x);
+
+//  Scanner class allows us to get data input that the user enters into the console.
+    // in order to first use the Scanner class, you'll need to import it.
+        Scanner scannerExample = new Scanner(System.in);
+
+        System.out.println("Enter something.");
+        String userInput = scannerExample.nextLine();   // this variable will store the users input as String.
+
+        System.out.printf("You entered --> %s . Right? %n", userInput);
+
+        userInput = scannerExample.nextLine(); // reusing the variable, to ask follow on question
+                                                // and get user feedback.
+
+//  Below, creating a simple if else statement.
+    // using equalsIgnoreCase() is a better approach, as the comparison is case-insensitive.
+    // will make your program more user-friendly.
+        if (userInput.equalsIgnoreCase("no")){
+            System.out.println("what the hell!");
+        } else {
+            System.out.printf("I knew it! %n");
+        }
 
 
     }

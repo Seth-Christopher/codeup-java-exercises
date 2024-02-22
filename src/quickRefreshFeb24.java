@@ -48,7 +48,7 @@ public class quickRefreshFeb24 {
     // in order to first use the Scanner class, you'll need to import it.
         Scanner scannerExample = new Scanner(System.in);
 
-        System.out.println("Enter something.");
+        System.out.printf("Enter something. %n");
         String userInput = scannerExample.nextLine();   // this variable will store the users input as String.
 
         System.out.printf("You entered --> %s . Right? %n", userInput);
@@ -64,6 +64,77 @@ public class quickRefreshFeb24 {
         } else {
             System.out.printf("I knew it! %n");
         }
+
+// Explore the Scanner Class. (codeup curriculum)
+        Scanner explore = new Scanner(System.in);
+
+        String firstWord;
+        String secondWord;
+        String thirdWord;
+    // using .split() method in order to grab 1 word from user input.
+        System.out.println("Enter 3 words.");
+        firstWord = explore.nextLine().split(" ") [0]; // using split to grab word at index 0
+        secondWord = explore.nextLine().split(" ") [0];
+        thirdWord = explore.nextLine().split(" ") [0];
+        System.out.printf("You entered: %s, %s, %s. %n", firstWord, secondWord, thirdWord);
+
+//--------------- using phind to clean up the above code ------------------ \\
+    // using same scanner as above, as to not confuse
+        // use a for loop for repetitive tasks, instead of repeating lines of code like above.
+        System.out.println("Enter 3 colors.");
+        String[] words = new String[3]; // Array for storing words, instead of individual variables. Makes code more flexible and easier to extend if the number of words to read changes.
+
+        for (int i = 0; i < 3; i++) {
+            words[i] = explore.nextLine().split(" ") [0];
+        }
+
+        System.out.printf("You entered these colors: %s, %s, %s.%n", words[0], words[1], words[2]);
+
+//        explore.close();    // Proper resource management: it is important to close the Scanner object after use to avoid resource leaks.
+
+//-------- using phind to ensure the user inputs only one word and that it's a string (not a number) ---------\\
+    // you can use the hasNext("[A-Za-z]+") method from the Scanner class.
+    // this method checks if next token in input can be interpreted as a string containing only alphabetic characters.
+        // using new Scanner
+
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Please enter 3 words.");
+//        String[] wordsExample = new String[3];
+//        for (int i = 0; i < 3; i++) {
+//            while (!scanner.hasNext("[A-Za-z]+")) {
+//                System.out.println("ERROR: Invalid input! Please enter a word (use only letters).");
+//                scanner.nextLine();
+//            }
+//            wordsExample[i] = scanner.next();
+//        }
+//        System.out.printf("You entered: %s, %s , %s.%n", wordsExample[0], wordsExample[1], wordsExample[2]);
+//
+
+
+
+// calculate the perimeter and area of a room
+        Scanner roomScanner = new Scanner(System.in);
+        int length;
+        int width;
+        int perimeter;
+        int area;
+        System.out.println("What is the length of the room?");
+        length = roomScanner.nextInt();
+
+        System.out.println("What is the width?");
+        width = roomScanner.nextInt();
+
+        area = length * width;
+        perimeter = (length * 2) + (width * 2);
+
+        System.out.printf("""
+                Area | Perimeter
+                %d   | %d %n""", area, perimeter);
+
+
+
 
 
     }

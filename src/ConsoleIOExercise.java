@@ -50,17 +50,19 @@ public class ConsoleIOExercise {
 //
 
 
-
-
+        // The below code starts by printing a message asking the user to input a number
+        // Declares an integer variable anuNumber without initializing it
+        // Enters an infinite loop (while (true)) which will continue until a valid number
+        // Is greater than 5.
             System.out.println("Quick, give me a number, any number.");
-            int anyNumber;
-            while (true) {
-                while (!userPrompt.hasNextInt()) {
-                    System.out.println("That is not a number! Please enter an an integer");
-                    userPrompt.next();
+            int anyNumber;  // declaring our any number variable
+            while (true) {  // whole code is wrapped in a while loop.
+                while (!userPrompt.hasNextInt()) {  // this while loop within the outer while loop, will run while userPrompt does NOT have an integer
+                    System.out.println("That is not a number! Please enter an an integer"); // prints error message.
+                    userPrompt.next();  // advances scanner to the next token, discarding the invalid input
                 }
-                anyNumber = userPrompt.nextInt();
-                if (anyNumber < 5) {
+                anyNumber = userPrompt.nextInt();   // if the next token is an integer, it assigns to this variable.
+                if (anyNumber < 5) {    // if less than 5, repeat loop.
                     System.out.println("Please make it an integer larger than 5:");
                 } else {
                     break;

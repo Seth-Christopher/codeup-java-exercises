@@ -92,6 +92,8 @@ public class quickRefreshFeb24 {
 
 //        explore.close();    // Proper resource management: it is important to close the Scanner object after use to avoid resource leaks.
 
+
+
 //-------- using phind to ensure the user inputs only one word and that it's a string (not a number) ---------\\
     // you can use the hasNext("[A-Za-z]+") method from the Scanner class.
     // this method checks if next token in input can be interpreted as a string containing only alphabetic characters.

@@ -94,26 +94,6 @@ public class quickRefreshFeb24 {
 
 
 
-//-------- using phind to ensure the user inputs only one word and that it's a string (not a number) ---------\\
-    // you can use the hasNext("[A-Za-z]+") method from the Scanner class.
-    // this method checks if next token in input can be interpreted as a string containing only alphabetic characters.
-        // using new Scanner
-
-
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.println("Please enter 3 words.");
-//        String[] wordsExample = new String[3];
-//        for (int i = 0; i < 3; i++) {
-//            while (!scanner.hasNext("[A-Za-z]+")) {
-//                System.out.println("ERROR: Invalid input! Please enter a word (use only letters).");
-//                scanner.nextLine();
-//            }
-//            wordsExample[i] = scanner.next();
-//        }
-//        System.out.printf("You entered: %s, %s , %s.%n", wordsExample[0], wordsExample[1], wordsExample[2]);
-//
-
 
 
 // calculate the perimeter and area of a room

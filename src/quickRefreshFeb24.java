@@ -92,10 +92,40 @@ public class quickRefreshFeb24 {
 
 //        explore.close();    // Proper resource management: it is important to close the Scanner object after use to avoid resource leaks.
 
+        Scanner sentence = new Scanner (System.in);
+
+        System.out.println("Enter a full length sentence. Minimum 10 letters. No numbers.");
+
+        String userSentence;
+        while (true) {
+            while (!sentence.hasNextLine()) {
+                System.out.println("Please enter a full length sentence, as directed before.");
+                sentence.next();
+            }
+            userSentence = sentence.nextLine();
+
+            if (userSentence.trim().isEmpty()) {
+                System.out.println("Please enter a sentence, input cannot be empty.");
+                continue;
+            }
+
+            if (userSentence.matches("\\d+")) {
+                System.out.println("Input cannot be a number! Enter a sentence.");
+                continue;
+            }
+            if (userSentence.trim().length() < 10) {
+                System.out.println("Please try again, at least 10 letters.!");
+            } else {
+                break;
+            }
+        }
 
 
 
 
+
+
+// ------------------------------------------------------------------------\\
 // calculate the perimeter and area of a room
         Scanner roomScanner = new Scanner(System.in);
         int length;

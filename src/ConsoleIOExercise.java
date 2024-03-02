@@ -56,6 +56,7 @@ public class ConsoleIOExercise {
         // Is greater than 5.
             System.out.println("Quick, give me a number, any number.");
             int anyNumber;  // declaring our any number variable
+        // using the Scanner from way above. userPrompt
             while (true) {  // whole code is wrapped in a while loop.
                 while (!userPrompt.hasNextInt()) {  // this while loop within the outer while loop, will run while userPrompt does NOT have an integer
                     System.out.println("That is not a number! Please enter an an integer"); // prints error message.

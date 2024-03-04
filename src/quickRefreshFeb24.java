@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class quickRefreshFeb24 {
+
+
+
     public static void main(String[] args) {
         // Variables in java must be declared before they are used.
         // includes a type for the variable, as well as a name (a valid identifier) for the variable.
@@ -8,20 +11,16 @@ public class quickRefreshFeb24 {
         int id = 123;
         boolean isLoggedIn = false;
         double bankAccountBalance = 1000.23;
-
 //    Create an int variable named myFavoriteNumber and assign your favorite number to it.
         int myFavoriteNumber = 2;
-
 
 //     Create a String variable named myString and assign a string value to it, then print the variable out to the console.
         String myString = "Hello World.";
         System.out.println(myString);
-
 //    Declare a long variable named myNumber, but do not assign anything to it. Next try to print out myNumber to the console. What happens?
         double myNumber = 23;
         System.out.println(myNumber);
 //    Change your code to assign the value 3.14 to myNumber. What do you notice?
-
         myNumber = 3.14;
         System.out.println(myNumber);
 //    Change your code to assign the value 123L (Note the 'L' at the end) to myNumber.
@@ -90,7 +89,7 @@ public class quickRefreshFeb24 {
 
         System.out.printf("You entered these colors: %s, %s, %s.%n", words[0], words[1], words[2]);
 
-//        explore.close();    // Proper resource management: it is important to close the Scanner object after use to avoid resource leaks.
+//        explore.close();    // Proper resource management: it's important to close the Scanner object after use to avoid resource leaks.
 
         Scanner sentence = new Scanner (System.in);
 
@@ -119,9 +118,6 @@ public class quickRefreshFeb24 {
                 break;
             }
         }
-
-
-
 
 
 

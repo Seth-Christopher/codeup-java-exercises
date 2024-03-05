@@ -3,6 +3,18 @@ import java.util.Scanner;
 public class quickRefreshFeb24 {
 
 
+// REFACTORED CODE FOR ASKING THE USER TO INPUT A SENTENCE EXERCISE
+    // To refactor the provided Java code snippet for reading a sentence from use. You can follow several best practices and techniques to improve the code's readability, maintainability, and efficiency.
+
+/* 1. Extract Validation Logic into Methods: Break down the validation logic into separate methods to improve         modularity and readability.
+    This approach aligns with the principle of Single Responsibility Principle (SRP), making each method            responsible for a single piece of functionality.
+
+    2. Use Descriptive Variable and Method Names to make their purpose clear.
+
+    3. Remove Redundant Code: The sentence.next() inside the first inner while loop seems redundant since it's not used. Consider removing it to avoid confusion.
+ */
+    private static final int MINIMUM_LENGTH = 10;
+
 
     public static void main(String[] args) {
         // Variables in java must be declared before they are used.
@@ -91,6 +103,8 @@ public class quickRefreshFeb24 {
 
 //        explore.close();    // Proper resource management: it's important to close the Scanner object after use to avoid resource leaks.
 
+    // below is the exercise for asking the user to input a sentence.
+        // we use a while loop with Scanner, and if else statements to ensure our desired request
         Scanner sentence = new Scanner (System.in);
 
         System.out.println("Enter a full length sentence. Minimum 10 letters. No numbers.");
@@ -118,10 +132,9 @@ public class quickRefreshFeb24 {
                 break;
             }
         }
+    //---------- WE WILL REFACTOR THE ABOVE CODE USING PHIND. THE REFACTORED CODE WILL BE ALL THE WAY AT THE TOP BECAUSE OF THE PRIVATE FINAL VARIABLES. --------------\\
 
-
-
-// ------------------------------------------------------------------------\\
+// --------------------------------------------------------------------------------------------------------------
 // calculate the perimeter and area of a room
         Scanner roomScanner = new Scanner(System.in);
         int length;

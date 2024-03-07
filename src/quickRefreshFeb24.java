@@ -12,11 +12,51 @@ public class quickRefreshFeb24 {
     2. Use Descriptive Variable and Method Names to make their purpose clear.
 
     3. Remove Redundant Code: The sentence.next() inside the first inner while loop seems redundant since it's not used. Consider removing it to avoid confusion.
+
+    4. Simplify Conditional Logic: Use the continue statement more effectively to reduce nesting and improve       readability.
+
+    5. Leverage Regular Expressions for Validation: Use regular expressions for more complex validation checks, such as ensuring the input does not contain numbers.
  */
     private static final int MINIMUM_LENGTH = 10;
 
+    private static String getRefactoredUserSentence(Scanner refactored) {
+        System.out.println("Enter a full length sentence. Minimum 10 letters. No numbers.");
+        while (true) {
+            String refactoredSentence = refactored.nextLine();
+            if (isValidSentence(refactoredSentence)) {
+                return refactoredSentence;
+            }
+        }
+    }
+
+    private static boolean isValidSentence(String sentence) {
+        if (sentence.trim().isEmpty()) {
+            System.out.println("Please enter a sentence, input cannot be empty.");
+            return false;
+        }
+        if (sentence.matches("\\d+")) {
+            System.out.println("Input cannot be a number! enter a sentence.");
+            return false;
+        }
+        if (sentence.trim().length() < MINIMUM_LENGTH) {
+            System.out.println("Please try again, at least 10 letters.");
+            return false;
+        }
+        return true;
+    }
+
 
     public static void main(String[] args) {
+        Scanner refactored = new Scanner(System.in);
+        String usersSentence = getRefactoredUserSentence(refactored);
+        System.out.println("You entered: " + usersSentence);
+
+
+// The refactored code introduces the following improvements:
+    // Modularity: The validation logic is encapsulated in the isValidSentence method. Making code more         modular and easier to maintain.
+    // Readability: By using descriptive method names and simplifying the conditional logic, the code becomes   more readable.
+    // Efficiency: The removal of redundant code and the use of a constant for the MINIMUM_LENGTH improve the   efficiency of the code.
+
         // Variables in java must be declared before they are used.
         // includes a type for the variable, as well as a name (a valid identifier) for the variable.
         // examples of variable declaration \\

@@ -17,7 +17,7 @@ public class quickRefreshFeb24 {
 
     5. Leverage Regular Expressions for Validation: Use regular expressions for more complex validation checks, such as ensuring the input does not contain numbers.
  */
-    private static final int MINIMUM_LENGTH = 10;
+    private static final int MINIMUM_LENGTH = 10; // Declares a constant whose value cannot be changed. Used to define fixed values.
 
     private static String getRefactoredUserSentence(Scanner refactored) {
         System.out.println("Enter a full length sentence. Minimum 10 letters. No numbers.");
@@ -46,7 +46,9 @@ public class quickRefreshFeb24 {
     }
 
 
-    public static void main(String[] args) {
+
+    public static void main(String[] args) {    // This line defines the main method, which is the entry point of any Java application. The main method is where the program starts executing.
+
         Scanner refactored = new Scanner(System.in);
         String usersSentence = getRefactoredUserSentence(refactored);
         System.out.println("You entered: " + usersSentence);

@@ -19,30 +19,30 @@ public class quickRefreshFeb24 {
  */
     private static final int MINIMUM_LENGTH = 10; // Declares a constant whose value cannot be changed. Used to define fixed values.
 
-    private static String getRefactoredUserSentence(Scanner refactored) {
+    private static String getRefactoredUserSentence(Scanner refactored) { // method takes a scanner object as a parameter and returns a String.
         System.out.println("Enter a full length sentence. Minimum 10 letters. No numbers.");
-        while (true) {
-            String refactoredSentence = refactored.nextLine();
-            if (isValidSentence(refactoredSentence)) {
-                return refactoredSentence;
+        while (true) { // start of infinite loop. Will continue until broken out of.
+            String refactoredSentence = refactored.nextLine(); // reads a line of text from the user and stores it in the refactoredSentence variable.
+            if (isValidSentence(refactoredSentence)) { // calls isValidSentence method. If returns true, then code inside if block is executed.
+                return refactoredSentence; // if sentence is valid then returned from the getRefactoredUserSentence method.
             }
         }
     }
 
-    private static boolean isValidSentence(String sentence) {
-        if (sentence.trim().isEmpty()) {
-            System.out.println("Please enter a sentence, input cannot be empty.");
+    private static boolean isValidSentence(String sentence) { // method takes a string as a parameter and returns a boolean
+        if (sentence.trim().isEmpty()) { // this line checks if the sentence is empty after removing any leading and trailing whitespace.
+            System.out.println("Please enter a sentence, input cannot be empty."); // if sentence is empty, this line runs
+            return false; // method returns false indicating that the sentence is not valid.
+        }
+        if (sentence.matches("\\d+")) { // this line checks if the sentence contains only digits.
+            System.out.println("Input cannot be a number! enter a sentence."); // if contains only digits, this line runs.
             return false;
         }
-        if (sentence.matches("\\d+")) {
-            System.out.println("Input cannot be a number! enter a sentence.");
+        if (sentence.trim().length() < MINIMUM_LENGTH) { // checks if sentence is shorter than the minimum length.
+            System.out.println("Please try again, at least 10 letters."); // if sentence is too short this line runs.
             return false;
         }
-        if (sentence.trim().length() < MINIMUM_LENGTH) {
-            System.out.println("Please try again, at least 10 letters.");
-            return false;
-        }
-        return true;
+        return true; // if none of the previous conditions are met, the method returns true. Indicating sentence is valid.
     }
 
 
@@ -50,7 +50,7 @@ public class quickRefreshFeb24 {
     public static void main(String[] args) {    // This line defines the main method, which is the entry point of any Java application. The main method is where the program starts executing.
 
         Scanner refactored = new Scanner(System.in);
-        String usersSentence = getRefactoredUserSentence(refactored);
+        String usersSentence = getRefactoredUserSentence(refactored); //method returns a string. Stores as usersSentence
         System.out.println("You entered: " + usersSentence);
 
 

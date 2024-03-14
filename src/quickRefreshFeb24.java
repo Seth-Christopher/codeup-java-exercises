@@ -179,22 +179,22 @@ public class quickRefreshFeb24 {
 // --------------------------------------------------------------------------------------------------------------
 // calculate the perimeter and area of a room
         Scanner roomScanner = new Scanner(System.in);
-        int length;
-        int width;
-        int perimeter;
-        int area;
-        System.out.println("What is the length of the room?");
-        length = roomScanner.nextInt();
+//        int length;
+//        int width;
+//        int perimeter;
+//        int area;
+        System.out.println("Please enter a length for the room?");
+        double length = (roomScanner.nextDouble());
 
         System.out.println("What is the width?");
-        width = roomScanner.nextInt();
+        double width = roomScanner.nextDouble();
 
-        area = length * width;
-        perimeter = (length * 2) + (width * 2);
+        double area = length * width;
+        double perimeter = (length * 2) + (width * 2);
 
         System.out.printf("""
                 Area | Perimeter
-                %d   | %d %n""", area, perimeter);
+                %.2f   | %.2f %n""", area, perimeter);
 
 
 

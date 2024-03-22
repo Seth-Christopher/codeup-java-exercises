@@ -193,6 +193,28 @@ public class quickRefreshFeb24 {
                 Area | Perimeter
                 %.2f   | %.2f %n""", area, perimeter);
 
+//---------------------------------------------------------------------------------------------------------------
+// ---------------- Control Flow Exercises -------------------\\
+    //  String Comparison
+    /*  While we use == to compare primitive types. We need to handle strings a little differently.
+        Each String is a different object.
+    */
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Continue? [y/N] ");
+        String userInputs = sc.next();
+
+    // DON'T DO THIS!!
+        boolean confirmation = userInputs == "y";
+// In the above example, confirmation will always be false, even if the user types "y".
+// Instead, we should use either the .equals or .equalsIgnoreCase methods on the String we want to compare.
+    // DO THIS INSTEAD
+        boolean confirmations = userInputs.equals("y");
+
+
+
+
+
+
 
 
 

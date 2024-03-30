@@ -211,6 +211,12 @@ public class quickRefreshFeb24 {
         boolean confirmations = userInputs.equals("y");
 
 
+        int integer = 5;
+        while (integer <= 15) {
+                System.out.println("Count = " + integer);
+                integer++;
+            }
+        }
 
 
 
@@ -219,5 +225,4 @@ public class quickRefreshFeb24 {
 
 
 
-    }
 }

@@ -55,9 +55,9 @@ public class quickRefreshFeb24 {
 
 
 // The refactored code introduces the following improvements:
-    // Modularity: The validation logic is encapsulated in the isValidSentence method. Making code more         modular and easier to maintain.
-    // Readability: By using descriptive method names and simplifying the conditional logic, the code becomes   more readable.
-    // Efficiency: The removal of redundant code and the use of a constant for the MINIMUM_LENGTH improve the   efficiency of the code.
+        // Modularity: The validation logic is encapsulated in the isValidSentence method. Making code more         modular and easier to maintain.
+        // Readability: By using descriptive method names and simplifying the conditional logic, the code becomes   more readable.
+        // Efficiency: The removal of redundant code and the use of a constant for the MINIMUM_LENGTH improve the   efficiency of the code.
 
         // Variables in java must be declared before they are used.
         // includes a type for the variable, as well as a name (a valid identifier) for the variable.
@@ -98,7 +98,7 @@ public class quickRefreshFeb24 {
         System.out.println(x);
 
 //  Scanner class allows us to get data input that the user enters into the console.
-    // in order to first use the Scanner class, you'll need to import it.
+        // in order to first use the Scanner class, you'll need to import it.
         Scanner scannerExample = new Scanner(System.in);
 
         System.out.printf("Enter something. %n");
@@ -107,12 +107,12 @@ public class quickRefreshFeb24 {
         System.out.printf("You entered --> %s . Right? %n", userInput);
 
         userInput = scannerExample.nextLine(); // reusing the variable, to ask follow on question
-                                                // and get user feedback.
+        // and get user feedback.
 
 //  Below, creating a simple if else statement.
-    // using equalsIgnoreCase() is a better approach, as the comparison is case-insensitive.
-    // will make your program more user-friendly.
-        if (userInput.equalsIgnoreCase("no")){
+        // using equalsIgnoreCase() is a better approach, as the comparison is case-insensitive.
+        // will make your program more user-friendly.
+        if (userInput.equalsIgnoreCase("no")) {
             System.out.println("what the hell!");
         } else {
             System.out.printf("I knew it! %n");
@@ -124,30 +124,30 @@ public class quickRefreshFeb24 {
         String firstWord;
         String secondWord;
         String thirdWord;
-    // using .split() method in order to grab 1 word from user input.
+        // using .split() method in order to grab 1 word from user input.
         System.out.println("Enter 3 words.");
-        firstWord = explore.nextLine().split(" ") [0]; // using split to grab word at index 0
-        secondWord = explore.nextLine().split(" ") [0];
-        thirdWord = explore.nextLine().split(" ") [0];
+        firstWord = explore.nextLine().split(" ")[0]; // using split to grab word at index 0
+        secondWord = explore.nextLine().split(" ")[0];
+        thirdWord = explore.nextLine().split(" ")[0];
         System.out.printf("You entered: %s, %s, %s. %n", firstWord, secondWord, thirdWord);
 
 //--------------- using phind to clean up the above code ------------------ \\
-    // using same scanner as above, as to not confuse
+        // using same scanner as above, as to not confuse
         // use a for loop for repetitive tasks, instead of repeating lines of code like above.
         System.out.println("Enter 3 colors.");
         String[] words = new String[3]; // Array for storing words, instead of individual variables. Makes code more flexible and easier to extend if the number of words to read changes.
 
         for (int i = 0; i < 3; i++) {
-            words[i] = explore.nextLine().split(" ") [0];
+            words[i] = explore.nextLine().split(" ")[0];
         }
 
         System.out.printf("You entered these colors: %s, %s, %s.%n", words[0], words[1], words[2]);
 
 //        explore.close();    // Proper resource management: it's important to close the Scanner object after use to avoid resource leaks.
 
-    // below is the exercise for asking the user to input a sentence.
+        // below is the exercise for asking the user to input a sentence.
         // we use a while loop with Scanner, and if else statements to ensure our desired request
-        Scanner sentence = new Scanner (System.in);
+        Scanner sentence = new Scanner(System.in);
 
         System.out.println("Enter a full length sentence. Minimum 10 letters. No numbers.");
 
@@ -174,7 +174,7 @@ public class quickRefreshFeb24 {
                 break;
             }
         }
-    //---------- WE WILL REFACTOR THE ABOVE CODE USING PHIND. THE REFACTORED CODE WILL BE ALL THE WAY AT THE TOP BECAUSE OF THE PRIVATE FINAL VARIABLES. --------------\\
+        //---------- WE WILL REFACTOR THE ABOVE CODE USING PHIND. THE REFACTORED CODE WILL BE ALL THE WAY AT THE TOP BECAUSE OF THE PRIVATE FINAL VARIABLES. --------------\\
 
 // --------------------------------------------------------------------------------------------------------------
 // calculate the perimeter and area of a room
@@ -195,27 +195,34 @@ public class quickRefreshFeb24 {
 
 //---------------------------------------------------------------------------------------------------------------
 // ---------------- Control Flow Exercises -------------------\\
-    //  String Comparison
+        //  String Comparison
     /*  While we use == to compare primitive types. We need to handle strings a little differently.
         Each String is a different object.
     */
-        Scanner sc = new Scanner (System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Continue? [y/N] ");
         String userInputs = sc.next();
 
-    // DON'T DO THIS!!
+        // DON'T DO THIS!!
         boolean confirmation = userInputs == "y";
 // In the above example, confirmation will always be false, even if the user types "y".
 // Instead, we should use either the .equals or .equalsIgnoreCase methods on the String we want to compare.
-    // DO THIS INSTEAD
+        // DO THIS INSTEAD
         boolean confirmations = userInputs.equals("y");
 
 
         int integer = 5;
         while (integer <= 15) {
-                System.out.println("Count = " + integer);
-                integer++;
-            }
+            System.out.println("Count = " + integer);
+            integer++;
+        }
+
+//        int integerTwo = count * 2; // the number we will multiply by.
+        int count = 0; // where we want our counter to begin.
+
+        while (count < 20) {
+            System.out.println("This is the second while statements loop. The count = " + count);
+            count *= 2;
         }
 
 
@@ -225,4 +232,13 @@ public class quickRefreshFeb24 {
 
 
 
-}
+
+
+
+    }   // YOUR JAVA MAIN CURLY BRACE
+
+
+
+
+
+} // CODE ENTIRETY

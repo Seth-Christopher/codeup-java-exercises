@@ -222,7 +222,7 @@ public class quickRefreshFeb24 {
 
         while (count < 20) {
             System.out.println("This is the second while statements loop. The count = " + count);
-            count *= 2;
+            count++;
         }
 
 
